@@ -1,6 +1,6 @@
 # Decidim::Adminauth
 
-[![Build Status](https://github.com/mainio/decidim-module-adminauth/actions/workflows/ci_entraid.yml/badge.svg)](https://github.com/mainio/decidim-module-adminauth/actions)
+[![Build Status](https://github.com/mainio/decidim-module-adminauth/actions/workflows/ci_adminauth.yml/badge.svg)](https://github.com/mainio/decidim-module-adminauth/actions)
 [![codecov](https://codecov.io/gh/mainio/decidim-module-adminauth/branch/main/graph/badge.svg)](https://codecov.io/gh/mainio/decidim-module-adminauth)
 
 Hardened admin access for Decidim. Adds one time login codes requirement for
