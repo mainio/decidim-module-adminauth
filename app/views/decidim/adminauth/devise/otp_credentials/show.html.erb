@@ -1,0 +1,32 @@
+<% add_decidim_page_title(t(".title")) %>
+
+<div class="wrapper">
+  <div class="row">
+    <div class="columns large-8">
+      <div class="page-title margin-bottom-0">
+        <h1><%= t(".title") %></h1>
+      </div>
+
+      <div class="text-large static__content">
+        <p><%= t(".explanation") %></p>
+      </div>
+
+      <div class="row">
+        <div class="columns large-8 margin-bottom-1">
+          <%= decidim_form_for(resource, as: resource_name, url: [resource_name, :otp_credential], html: { method: :put, id: "otp_new_user", class: "otp-credential-form" }) do |f| %>
+            <%= f.hidden_field :remember_me, value: remember_me? %>
+            <%= f.text_field :otp_token, value: "", autocomplete: "off", required: true, minlength: 6, maxlength: 6 %>
+
+            <%= f.submit t(".submit") %></p>
+          <% end %>
+        </div>
+      </div>
+
+      <div class="static__content margin-bottom-3">
+        <h2 class="h6"><%= t(".new_code.title") %></h2>
+        <p><%= t(".new_code.explanation") %></p>
+        <%= button_to t(".new_code.request"), [resource_name, :otp_credential], method: :post, id: "resend_code_button", class: "link" %>
+      </div>
+    </div>
+  </div>
+</div>

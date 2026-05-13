@@ -1,0 +1,33 @@
+sv:
+  activerecord:
+    attributes:
+      decidim/user:
+        otp_token: Verifieringskod
+  decidim:
+    adminauth:
+      devise:
+        otp_credentials:
+          otp_session_invalid: Utgången eller ogiltig autentiseringssession. Försök att logga in igen.
+          resend_success: Verifieringskoden har skickats till din e-postadress igen.
+          resend_too_fast:
+            one: Du kan begära ett nytt e-postmeddelande högst varje minut.
+            other: Du kan begära ett nytt e-postmeddelande högst var %{count}:e minut.
+          show:
+            explanation: Administratörsanvändare måste ange en verifieringskod innan de kan komma åt plattformen. Verifieringskoden har skickats till din e-postadress. Ange verifieringskoden i fältet nedan och tryck på knappen Fortsätt.
+            submit: Fortsätta
+            title: Autentiseringsverifieringskod
+            new_code:
+              explanation: Verifieringskoden skickas till din e-postadress så snart som möjligt. Om du har väntat länge kan du begära en ny e-postmeddelande.
+              request: Skicka verifieringskoden igen
+              title: Fick du ingen verifieringskod i din e-post?
+      otp_token_mailer:
+        otp_token:
+          hello: Hej %{name},
+          intro: Du försöker logga in på tjänsten %{service_name}.
+          instruction: 'För att slutföra inloggningen, använd följande verifieringskod:'
+          outro: Om du inte försökte logga in på tjänsten själv rekommenderar vi att du återställer ditt lösenord.
+          subject: Verifieringskod för tjänsten %{service_name}
+  devise:
+    failure:
+      otp_token_blank: Ange verifieringskoden som skickats till din e-postadress i fältet som visas på den här sidan.
+      otp_token_invalid: Den angivna verifieringskoden var ogiltig.

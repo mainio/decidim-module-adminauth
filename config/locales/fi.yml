@@ -1,0 +1,33 @@
+fi:
+  activerecord:
+    attributes:
+      decidim/user:
+        otp_token: Vahvistuskoodi
+  decidim:
+    adminauth:
+      devise:
+        otp_credentials:
+          otp_session_invalid: Vanhentunut tai virheellinen tunnistautumisistunto. Yritä kirjautua sisään uudestaan.
+          resend_success: Vahvistuskoodi on lähetetty sähköpostiisi uudestaan.
+          resend_too_fast:
+            one: Voit pyytää uutta sähköpostia enintään minuutin välein.
+            other: Voit pyytää uutta sähköpostia enintään %{count} minuutin välein.
+          show:
+            explanation: Hallintakäyttäjien on annettava vahvistuskoodi kirjautuakseen sisään tälle alustalle. Vahvistuskoodi on toimitettu sähköpostiisi. Syötä vahvistuskoodi alla näkyvään kenttään ja paina Jatka-painiketta.
+            submit: Jatka
+            title: Kirjautumisen vahvistuskoodi
+            new_code:
+              explanation: Vahvistuskoodi toimitetaan mahdollisimman pian sähköpostiisi. Mikäli olet odottanut jo pitkään, voit pyytää uutta sähköpostia.
+              request: Lähetä vahvistuskoodi uudestaan
+              title: Etkö saanut vahvistuskoodia sähköpostiisi?
+      otp_token_mailer:
+        otp_token:
+          hello: Hei %{name},
+          intro: Yrität kirjautua palveluun %{service_name}.
+          instruction: 'Viimeistelläksesi kirjautumisesi, käytä seuraavaa vahvistuskoodia:'
+          outro: Mikäli et itse yrittänyt kirjautua palveluun, suosittelemme salasanasi vaihtamista.
+          subject: Vahvistuskoodi palveluun %{service_name}
+  devise:
+    failure:
+      otp_token_blank: Syötä sähköpostiisi lähetetty vahvistuskoodi sivulla näkyvään kenttään.
+      otp_token_invalid: Virheellinen vahvistuskoodi.

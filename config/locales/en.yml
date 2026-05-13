@@ -1,0 +1,33 @@
+en:
+  activerecord:
+    attributes:
+      decidim/user:
+        otp_token: Verification code
+  decidim:
+    adminauth:
+      devise:
+        otp_credentials:
+          otp_session_invalid: Expired or invalid authentication session. Please try logging in again.
+          resend_success: The verification code has been sent to your email again.
+          resend_too_fast:
+            one: You can request a new email at most every minute.
+            other: You can request a new email at most every %{count} minutes.
+          show:
+            explanation: Admin users need to provide a verification code before they can access the platform. The verification code has been sent to your email. Enter the verification code in the field below and press the Continue button.
+            submit: Continue
+            title: Authentication verification code
+            new_code:
+              explanation: The verification code will be sent to your email as soon as possible. If you have been waiting for a long time, you can request a new email.
+              request: Send the verification code again
+              title: Did not receive a verification code in your email?
+      otp_token_mailer:
+        otp_token:
+          hello: Hello %{name},
+          intro: You are trying to log in to the %{service_name} service.
+          instruction: 'To complete the login, use the following verification code:'
+          outro: If you did not try to login to the service yourself, we recommend resetting your password.
+          subject: Verification code for the %{service_name} service
+  devise:
+    failure:
+      otp_token_blank: Enter the verification code sent to your email in the field displayed on this page.
+      otp_token_invalid: The provided verification code was invalid.
